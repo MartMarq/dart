@@ -1,4 +1,4 @@
-#DART
+#DARTS
 
 Watchface for Watchy (SQFMI)
 
