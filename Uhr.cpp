@@ -131,7 +131,7 @@ void Uhr::drawWatchFace() {
         cx1 = 100 - (sin(lange) * 35);
         cy1 = 100 + (cos(lange) * 35);
 
-        if (stundeA & 1) {
+        if (hour & 1) {
             display.fillCircle(cx1, cy1, 3, GxEPD_WHITE);
             display.drawCircle(cx1, cy1, 4, GxEPD_BLACK);
             display.drawLine(cx1 - 5, cy1, cx1 + 5, cy1, GxEPD_BLACK);
@@ -170,7 +170,7 @@ void Uhr::drawWatchFace() {
         cx1 = 100 - (sin(lange) * 63);
         cy1 = 100 + (cos(lange) * 63);
 
-        if (n & 1) {
+        if (hour & 1) {
             display.fillCircle(cx1, cy1, 3, GxEPD_WHITE);
             display.drawCircle(cx1, cy1, 4, GxEPD_BLACK);
             display.drawLine(cx1 - 5, cy1, cx1 + 5, cy1, GxEPD_BLACK);
