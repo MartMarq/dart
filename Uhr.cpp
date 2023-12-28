@@ -196,8 +196,7 @@ void Uhr::handleButtonPress() {
     }
   }
 
-
-  if (IS_BTN_RIGHT_UP) {
+if (IS_BTN_RIGHT_UP) {
     vibrate();
     Welche = Welche + 1;
     if (Welche > 2) {
@@ -206,11 +205,18 @@ void Uhr::handleButtonPress() {
     RTC.read(currentTime);
     drawWatchFace();
     showWatchFace(true);
+  } else if (IS_BTN_RIGHT_DOWN) {
+    vibrate();
+    Welche = Welche - 1;
+    if (Welche < 1) {
+      Welche = 2;
+    }
+    RTC.read(currentTime);
+    drawWatchFace();
+    showWatchFace(true);
+  } else {
+    Watchy::handleButtonPress();
   }
-  if (IS_BTN_RIGHT_DOWN) {
-  }
-
-  Watchy::handleButtonPress();
 }
 
 void Uhr::vibrate() {
